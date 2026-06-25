@@ -1,0 +1,48 @@
+# ==========================
+# USUÁRIOS E GRUPOS
+# ==========================
+
+-w /usr/sbin/useradd  -p x -k user_admin
+-w /usr/sbin/usermod  -p x -k user_admin
+-w /usr/sbin/userdel  -p x -k user_admin
+
+-w /usr/sbin/groupadd -p x -k group_admin
+-w /usr/sbin/groupmod -p x -k group_admin
+-w /usr/sbin/groupdel -p x -k group_admin
+
+-w /usr/bin/passwd    -p x -k passwd_changes
+
+
+# ==========================
+# ARQUIVOS CRÍTICOS
+# ==========================
+
+-w /etc/passwd  -p wa -k user_file_changes
+-w /etc/shadow  -p wa -k user_file_changes
+
+-w /etc/group   -p wa -k group_file_changes
+-w /etc/gshadow -p wa -k group_file_changes
+
+
+# ==========================
+# SUDO
+# ==========================
+
+-w /etc/sudoers    -p wa -k sudo_changes
+-w /etc/sudoers.d/ -p wa -k sudo_changes
+
+
+# ==========================
+# POLÍTICAS DE LOGIN
+# ==========================
+
+-w /etc/login.defs -p wa -k login_policy
+
+
+# ==========================
+# PERMISSÕES
+# ==========================
+
+-a always,exit -F arch=b64 -S chmod,fchmod,fchmodat -k permission_changes
+
+-a always,exit -F arch=b64 -S chown,fchown,fchownat,lchown -k ownership_changes
