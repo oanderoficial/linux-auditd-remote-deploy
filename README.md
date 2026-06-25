@@ -87,6 +87,7 @@ R --> S
 ├── audit_remote.py
 ├── audit_clean.sh
 ├── customizedaudit.rules
+├── .env
 ├── hosts.txt
 ├── resultado_copy_audit.csv
 └── README.md
