@@ -28,6 +28,7 @@ O processo contempla desde a preparação do ambiente até a validação final d
 - Validação automática da configuração aplicada
 - Geração de relatório em CSV
 - Tratamento de erros de autenticação, SSH, timeout e permissões
+- Modo Dry run (valida conexão, arquivos locais, diretórios remotos e comandos necessários)
 
 ---
 
@@ -185,6 +186,13 @@ ou
 python3 audit_remote.py -H hosts.txt
 ```
 
+---
+
+## Modo Dry Run
+
+```bash
+python3 audit_remote.py -H hosts.txt --dry-run
+```
 ---
 
 # Arquivos alterados nos servidores
