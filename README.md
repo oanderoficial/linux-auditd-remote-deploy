@@ -129,8 +129,7 @@ server03
 
 ## audit_clean.sh
 
-Script responsável pela limpeza das regras existentes ou outras ações auxiliares.
-
+Script responsável pela gravação das logs 
 ---
 
 ## customizedaudit.rules
